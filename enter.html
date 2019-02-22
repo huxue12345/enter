@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				padding: 0;
+			}
+			.wrap{
+				width: 300px;
+				margin:200px auto ;
+				color: #FFF0D0;
+				/*border: 1px solid #000000;*/
+					position: relative;
+			}
+			.use,.pass{
+				width: 200px;
+				height: 30px;
+				margin-bottom: 20px;
+				background: transparent;
+				border: 1px solid #D1AB57;
+				margin-left: 31px;
+				padding-left:5px ;
+			}
+			.wrap::before,.wrap::after{
+				content: '';
+				display: block;
+				position: absolute;
+				width: 30px;
+				height: 30px;
+				border: 1px solid #D1AB57;
+			}
+			.wrap::before{
+			   top: 35px;	
+			}
+			.wrap::after{
+			   top: 87px;	
+			}
+			input:-webkit-input-placeholder{
+				color: #C0C0C0;
+			}
+			.unpass,.enter{
+			width: 85px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			color:#006600;
+			background: #005EEE;
+			position: absolute;
+			bottom:-30px;
+			border-color:transparent ;
+			}
+			.unpass{
+				left: -75px;
+				
+			
+			}
+			.enter{
+				right: -50px;
+			}
+			h3{
+				color: saddlebrown;
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body bgcolor="#00001E">
+		<div class="wrap">
+			<h3>翡翠学院后台管理</h3>
+			<form action="http://localhost:3000/" method="get">
+			  <input type="text" name='username' placeholder="用户名" class='use'/> 
+			  <input type="text" name='password' placeholder="密码" class='pass'/> 
+			  <input type="submit"  value="忘记密码" class='unpass'/>
+			  <input type="submit"  value='登录' class="enter"/>
+			</form>
+		</div>
+	</body>
+</html>
